@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Boilerplate API",
+        "title": "Boilerplate API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/": {
+            "get": {
+                "description": "Hello World",
+                "tags": [
+                    "Hello World"
+                ],
+                "summary": "Hello World",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/server.Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "server.Response": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "description": "data"
+                },
+                "error": {
+                    "description": "error",
+                    "type": "string"
+                },
+                "message": {
+                    "description": "message",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "success | error | failed",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
